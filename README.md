@@ -1,20 +1,45 @@
-# Lucky draw static web page
+# Left Or Right
 
-# How to
+This project is a simple web application that displays a "Left Or Right" game.
 
-Update the following with the relevant information:
+## Installation
 
-- background.jpg (Background image of web page)
-- allImages and allPrizeText in common.js (Length should match)
-- image folder (will all necessary images)
+1. Clone the repository:
+    ```sh
+    git clone https://github.com/yourusername/left-or-right.git
+    ```
+2. Navigate to the project directory:
+    ```sh
+    cd left-or-right
+    ```
 
-Upload a CSV file containing all the names and start drawing
+## Usage
 
-## Todos
+Open `index.html` in your web browser to start the application.
 
-- Extract JSON file of names/winners, can be accepted as input also?
-- display button to extract winners, only after extracted then the file input will reappear
+## Project Structure
 
-Remove background, items in common.js to be moved to external file
+- `index.html`: The main HTML file that sets up the structure of the web page.
+- `styles.css`: The CSS file that contains the styling for the web page.
+- `common.js`: The JavaScript file that contains the logic for the web page.
+- `image/`: Directory for storing images.
 
-Then maybe look at state?
+## Contributing
+
+1. Fork the repository.
+2. Create a new branch:
+    ```sh
+    git checkout -b feature-branch
+    ```
+3. Make your changes and commit them:
+    ```sh
+    git commit -m "Description of your changes"
+    ```
+4. Push to the branch:
+    ```sh
+    git push origin feature-branch
+    ```
+5. Open a pull request.
+
+## License
+This project is licensed under the MIT License.

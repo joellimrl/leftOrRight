@@ -1,167 +1,99 @@
 body {
-    font-family: Arial, sans-serif;
-    display: flex;
-    /* justify-content: center; */
-    align-items: center;
-    height: 100vh;
-    margin: 0;
-    position: relative;
-    background: url('background.jpg') no-repeat center center fixed;
-    background-size: cover;
-    overflow: hidden;
+  font-family: Arial, sans-serif;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  height: 100vh;
+  margin: 0;
+  background-color: rgba(250, 188, 63, 0.3);
+  overflow: hidden;
 }
 
-input,
+.mainContainer {
+  padding: 20px;
+  margin-left: auto;
+  margin-right: auto;
+  width: 90%;
+  height: 70%;
+  display: flex;
+  text-align: center;
+  z-index: 2;
+}
+
+.subContainer {
+  width: 50%;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  font-size: 100px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 20px;
+}
+
+#left {
+  background: rgba(13, 146, 244, 0.3);
+}
+
+#right {
+  background: rgba(199, 37, 62, 0.3);
+}
+
 button {
-    margin: 10px;
-    padding: 10px;
-    font-size: 16px;
-    border-radius: 10px;
-    border-color: rgba(0, 0, 0, 0.1);
-    position: relative;
-    z-index:2;
+  align-items: center;
+  background-color: #fee6e3;
+  border: 2px solid #111;
+  border-radius: 8px;
+  box-sizing: border-box;
+  color: #111;
+  cursor: pointer;
+  display: flex;
+  font-family: Inter, sans-serif;
+  font-size: 16px;
+  height: 48px;
+  justify-content: center;
+  line-height: 24px;
+  max-width: 100%;
+  padding: 0 25px;
+  position: relative;
+  text-align: center;
+  text-decoration: none;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
 }
 
-#nameList {
-    margin-top: 20px;
-    max-height: 200px;
-    overflow-y: auto;
+button:after {
+  background-color: #111;
+  border-radius: 8px;
+  content: '';
+  display: block;
+  height: 48px;
+  left: 0;
+  width: 100%;
+  position: absolute;
+  top: -2px;
+  transform: translate(8px, 8px);
+  transition: transform 0.2s ease-out;
+  z-index: -1;
 }
 
-.roulette {
-    margin-top: 8%;
-    height: 150px;
-    /* Increased height */
-    overflow: hidden;
-    position: relative;
-    border: 2px solid #ccc;
-    border-radius: 5px;
+button:hover:after {
+  transform: translate(0, 0);
 }
 
-#rouletteContent {
-    position: absolute;
-    width: 100%;
-    height: auto;
-    display: flex;
-    flex-direction: column;
+button:active {
+  background-color: #ffdeda;
+  outline: 0;
 }
 
-#rouletteContent p {
-    margin: 0;
-    text-align: center;
-    font-size: 60px;
-    color: #333;
-    height: 150px; /* This should match itemHeight */
-    line-height: 150px; /* Align text vertically */
-    white-space: nowrap;
+button:hover {
+  outline: 0;
 }
 
-table {
-    width: 100%;
+@media (min-width: 768px) {
+  button {
+    padding: 0 40px;
+  }
 }
-
-input[type="file"] {
-    height: 43px;
-    border-radius: 10px;
-    border-color: rgba(0, 0, 0, 0.1)
-}
-
-input[type="file"]::-webkit-file-upload-button {
-    height: 43px;
-    border-radius: 10px;
-    border-color: rgba(0, 0, 0, 0.1)
-}
-
-/* Confetti effect */
-@keyframes confetti {
-    0% {
-        transform: translateY(0);
-    }
-
-    100% {
-        transform: translateY(100vh);
-    }
-}
-
-.confetti div {
-    position: absolute;
-    width: 15px;
-    height: 15px;
-    background: #ff0;
-    opacity: 0.8;
-    border-radius: 50%;
-    animation: confetti 3s infinite;
-}
-
-.confetti div:nth-child(odd) {
-    background: #f0f;
-    width: 12px;
-    height: 12px;
-}
-
-.confetti div:nth-child(2n) {
-    background: #0ff;
-    width: 8px;
-    height: 8px;
-}
-
-.confetti div:nth-child(3n) {
-    background: #f00;
-    width: 6px;
-    height: 6px;
-}
-
-.confetti div:nth-child(4n) {
-    background: #0f0;
-    width: 10px;
-    height: 10px;
-}
-
-.confetti div:nth-child(5n) {
-    background: #00f;
-    width: 14px;
-    height: 14px;
-}
-
-.slide {
-    animation: fadeIn 2s;
-    -webkit-animation: fadeIn 2s;
-    -moz-animation: fadeIn 2s;
-    -o-animation: fadeIn 2s;
-    -ms-animation: fadeIn 2s;
-}
-
-#slides {
-    max-width: 70%;
-    display: block;
-    margin-left: auto;
-    margin-right: auto;
-    width: 70%;
-    height: 280px;
-}
-
-@keyframes fadeIn {
-    0% { opacity: 0; }
-    100% { opacity: 1; }
-}
-
-.float-container {
-    padding: 20px;
-    margin-left:auto;
-    margin-right:auto;
-    width:90%;
-    display:flex;
-    text-align: center;
-    background: rgba(220, 220, 220, 0.8);
-    padding: 20px;
-    border-radius: 10px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-    z-index: 2;
-}
-
-.float-child {
-    width: 30%;
-    /* float: left; */
-    padding: 20px;
-    
-}  
